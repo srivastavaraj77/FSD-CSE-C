@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card with Hide Image</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f4f4f9;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      background: white;
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      display: block;
+    }
+    .card button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background: #4a90e2;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .card button:hover {
+      background: #357abd;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img id="cardImage" src="fd2d67b1462a4d21ec6ac24fb241c93a.jpg" alt="Sample Image">
+    <button onclick="document.getElementById('cardImage').style.display='none'">Hide Image</button>
+  </div>
+</body>
+</html>

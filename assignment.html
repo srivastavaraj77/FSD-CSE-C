@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter App</title>
+  <style>
+    
+    
+
+    .logo {
+      width: 70px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .counter-container {
+      margin-top: 80px;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .count {
+      font-size: 48px;
+      margin: 20px 0;
+    }
+
+    .btn {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    
+
+    .plus {
+      background: #28a745;
+      color: white;
+    }
+
+    .minus {
+      background: #dc3545;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+ 
+  <div>
+    <img src="fd2d67b1462a4d21ec6ac24fb241c93a.jpg" alt="logo" class="logo">
+    <div class="title">COUNTER APP</div>
+  </div>
+
+  <div class="counter-container">
+    <h2>Counter</h2>
+    <div class="count" id="count">0</div>
+    <button class="btn minus" onclick="decrement()">−</button>
+    <button class="btn plus" onclick="increment()">+</button>
+  </div>
+
+  <script>
+    let count = 0;
+    const countDisplay = document.getElementById("count");
+
+    function increment() {
+      if (count < 10) {
+        count++;
+        countDisplay.textContent = count;
+        if (count === 10) {
+          alert("You reached the maximum count of 10!");
+        }
+      }
+    }
+
+    function decrement() {
+      if (count > 0) {
+        count--;
+        countDisplay.textContent = count;
+      }
+    }
+  </script>
+</body>
+</html>
